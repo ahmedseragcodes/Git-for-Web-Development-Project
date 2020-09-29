@@ -1,0 +1,134 @@
+Codepen link: https://codepen.io/AhmedSerag/pen/BaKepPW?editors=1100
+
+
+	1. What is Semantic HTML? 
+Tags and elements that describe what they do to the browser and programmer reading them, like h1 or section or header, as 
+opposed to non-semantics like div or span.
+    
+	2. What is HTML used for? 
+A markup language that renders on page content for the user
+
+	3. What is an attribute and where do we put it? 
+an attribute references content we want to be available to the user but not render on page, like href for <a></a> element
+
+	4. What is the h1 tag used for? How many times should I use it on a page? 
+its the highest level of headings, so also the largest and most important, as compared to h2-h6, and should only be used 
+on a page once.
+
+	5. Name two tags that have required attributes
+<img> with src being the attribute, and <a><a/> with href being the attribute
+
+	6. What do we put in the head of our HTML document? 
+<!DOCTYPE html>
+	<head>
+		<meta charset="utf-8">
+		<html lang="en">
+		<link rel="stylesheet" type="text/css" href="styles.css">
+	</head>
+		
+    7. What is an id? 
+a type of selector meant for one element, like <h1 id="example"></h1>, with the css being #example {color: aqua;}
+
+    8. What elements can I add an id to? 
+h1-h6, p, ul, li, div, section
+
+    9. How many times can I use the same id on a page? 
+once
+
+    10. What is a class?
+ a selector that can be applied to multiple elements, like <p class="example"></p> with css being .example {font-size: 18px; color: aqua;}
+
+    11. What elements can I add a class to? 
+h1-h6, p, ul, li, div, section
+
+    12. How many times can I use the same class on a page? 
+multiple, not sure that there is a limit but you wouldn't hit it
+
+    13. How do I get my link to open in a new tab?
+<a href="#" target=_blank>Link text</a>
+
+    14. What is the alt attribute in the image tag used for? 
+screenreaders, alternative text for accessibility reasons so all kinds of people can enjoy the image
+
+    15. How do I reference an id? 
+In CSS you referance an id with #, whereas in html it could be <div id="frontpage-banner"></div>
+
+    16. What is the difference between a section and a div
+section is semantic, whereas div is not 
+
+    17. What is CSS used for? 
+cascading style sheets are used for manipulating elements display and presentation
+
+    18. How to we select an element? Example - every h2 on the page
+in css, h2 {font-weight: bold; font-size: 30px;}
+
+    19. What is the difference between a class and an id? - Give me an example of when I might use each one
+id targets one element whereas class targets multiple, you could use an id to change the look of just the payment button 
+on a checkout page #payment-button {padding: 30px; color: green, font-weight:bold;}, versus using a class to make sure all paragraphs are the same font family .paragraphfont {font-family: comic sans MS;}
+
+    20. How do we select classes in CSS?
+With the . like .classExample {}
+
+    21. How do we select a p element with a single class of “human””?
+html: <p class="human"></p> css: .human {}
+
+    22. What is a parent child selector? When would this be useful? 
+div > p {} would select only p children of div
+
+    23. How do you select all links within a div with the class of sidebar?
+.sidebar a {}
+
+    24. What is a pseudo selector?
+they're used to style elements when their stage changes, like section:hover {background-color: aqua;} or a:visited {color: red;}
+
+    25. What do we use the change the spacing between lines?
+the line-height property in css, like p {line-height: 2px;}
+
+    26. What do we use to change the spacing between letters?
+the letter-spacing property in css, like p {letter-spacing: 2px;}
+
+    27. What do we use to to change everything to CAPITALS? lowercase? Capitalize?
+capitals -> text-transform: uppercase;
+lowercase-> text-transform: lowercase;
+capitalize the first letter of each word -> text-transform: capitalize;
+
+    28. How do I add a 1px border around my div that is dotted and black?
+div {border: 1px dotted black;}
+
+    29. How do I select everything on the page? 
+* {}
+
+    30. How do I write a comment in CSS?
+/* */
+
+    31. How do I find out what file I am in, when I am using the command line? 
+pwd
+
+    32. Using the command line - how do I see a list of files/folders in my current folder?
+ls
+
+    33. How do I remove a file via the command line? Why do I have to be careful with this? 
+rm file, you need to be careful because there is no warning and no reverse possible 
+
+    34. Why should I use version control? 
+many times when you're coding you're going to need to test different things, find bugs, update progressively instead of 
+in chunks, share different stages with other team-members, version control is designed for this
+
+    35. How often should I commit to github?
+every time you save your file in vscode and often, better for your teammembers to commit in smaller amounts than larger chunks 
+as well as to keep good notes in commit
+
+    36. What is the command we would use to push our repo up to github? 
+git push -u origin Ahmed-Serag
+
+    37. Walk me through Lambda's git flow. 
+-fork github
+-optional:add collaborator through settings and manage access
+-grab clone link from code section of github and in gitbash, git clone cloneLink
+-changedirectory into that clone link, so cd cloneLink
+-form your branch with checkout -b "Ahmed-Serag"
+-make your changes, then git add . to stage changes, and git commit -m "commit notes" to commit
+-push changes to github with git push -u origin Ahmed-Serag
+-go back to your forked copy of the github and click compare & pull request which will show once github recognizes you pushed
+-change base repository to your own instead of lambda or whoever it was forked from
+-create pull request 
